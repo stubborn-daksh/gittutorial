@@ -14,5 +14,15 @@
         // console.log(document.links);
         // console.log(document.images);
 //GetElementById
+var headerTitle = document.getElementById('header-title');
 var header = document.getElementById('main-header');
-console.log(header);
+header.style.borderBottom = "1px solid black";
+
+var getItem = document.getElementsByClassName('title');
+getItem[1].style.fontWeight = 'bold';
+getItem[1].style.textColor = 'green';
+// header.textContent = "Hello";
+// header.innerText = "GoodBye";
+// header.innerHTML = "<h4>Hello</h4>";
+// var data = document.getElementsByClassName('container');
+// console.log(data);
