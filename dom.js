@@ -14,13 +14,15 @@
         // console.log(document.links);
         // console.log(document.images);
 //GetElementById
-var headerTitle = document.getElementById('header-title');
-var header = document.getElementById('main-header');
-header.style.borderBottom = "1px solid black";
+// var headerTitle = document.getElementById('header-title');
+// var header = document.getElementById('main-header');
+// header.style.borderBottom = "1px solid black";
 
 var getItem = document.getElementsByClassName('title');
+getItem.style.fontWeight = 'bold';
 getItem[1].style.fontWeight = 'bold';
 getItem[1].style.textColor = 'green';
+getItem[3].style.backgroundColor = 'yellow';
 // header.textContent = "Hello";
 // header.innerText = "GoodBye";
 // header.innerHTML = "<h4>Hello</h4>";
