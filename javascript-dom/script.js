@@ -30,6 +30,27 @@
 // }
 
 //Get Elements by class name
-var res7 = document.getElementsByClassName("header");
-console.log(res7);
+// var res7 = document.body.getElementsByClassName("header");
+// console.log(res7);
+// var res7 = document.body.getElementsByClassName("header");
+// var len = res7.length;
+// document.write(len);
+// for(let i=0; i<len; i++){
+//     var ans8 = document.getElementsByClassName('header')[i];
+//     document.write(ans8 +"<br>");
+// }
 
+// var data = document.getElementById('header');
+// var result = data.document.querySelectorAll('span');
+// var result = data.document.querySelectorAll('span.apple');
+// document.write(result);
+// console.log(result);
+// var ans  = document.getElementsByClassName('header').querySelectorAll('span.banana');
+// console.log(ans);
+
+//=============Attribute Property in Javascript==============//////////////////////////////
+// var ans = document.getElementById("js1");
+// document.write(ans);
+// console.log(ans);
+// var ans = result.attributes[0].nodeName;
+// document.write(ans);

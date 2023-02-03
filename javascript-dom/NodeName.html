@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Object</title>
+</head>
+<body >
+    <div id="myid">
+        <h1> Let me learn javascript dom manipulation</h1>
+        <h2>I am h2</h2>
+    </div>
+    <script>
+        //============Append Element Node Text Node and Comment Node Together in JavaScript====
+        // var nEnode = document.createElement("h2");//creating new Element
+        // var nTnode = document.createTextNode("Text by js");//creating text node
+        // var nCnode = document.createComment("i am comment");//creating comment node
+        // nEnode.appendChild(nTnode);//Append new text Node to next Element node
+        // var targetNode = document.getElementById("myid");
+        // targetNode.appendChild(nEnode);//append new element node to div
+        // targetNode.appendChild(nCnode);//append comment node to target node
+        // console.log(targetNode);
+        //===============Append Comment  Node in javascript =========
+        // var trgtNode = document.getElementById("myid");
+        // var fnl = document.createComment("Text by javascrpt");
+        // trgtNode.appendChild(fnl);
+        // console.log(trgtNode);
+        //===============Append Text  Node in javascript =========
+        // var trgtNode = document.getElementById("myid");
+        // var fnl = document.createTextNode("Text by javascrpt");//creating new text node
+        // trgtNode.appendChild(document.createTextNode("Text by javascrpt"));//appending the text 
+        // console.log(trgtNode);
+        //===============Append Existing Element Node using Document fragment=========
+        // var myId = document.getElementById(myid);
+        // console.log(myid);
+        // var mysec = document.getElementById("mysec");
+        // var myh1 = document.getElementById("myh1");
+        // mysec.appendChild(myh1);
+        // console.log(myh1);
+        // console.log(mysec);
+        // var nEnode = document.createElement("h2");
+        // var trgtNode = document.getElementById("myid");
+        // trgtNode.appendChild(nEnode);
+        // console.log(trgtNode);
+
+        //=========Create a empty document fragment===========
+        // var df = document.createDocumentFragment();
+        // console.log(df);
+        //============Create a new comment node by javascript=================
+        // var Cnode = document.createComment("Tum Don ho be ");
+        // console.log(Cnode);
+        //============Create a new text node by javascript=================
+        //  var tnode = document.createTextNode("Tum Don ho be ");
+        // console.log(tnode);
+        //============Create a new html element by javascript=================
+        // var nnode = document.createElement("h2");
+        // console.log(nnode);
+        //==================nextSibling and nextElementSibling===============
+        // var result = document.getElementById("myid");
+        // console.log(result.firstChild.nextSibling);
+        // console.log(result.firstChild.nextElementSibling);
+        //==================PreviousSibling and PreviousElementSibling===============
+        // var result = document.getElementById("myid");
+        // console.log(result.lastChild.previousSibling);
+        // console.log(result.lastChild.previousElementSibling);
+         //===============Lastchild and LastElementChild============================
+        //  var result = document.getElementById("myid");
+        //  console.log(result.lastChild);
+        //  console.log(result.lastElementChild);
+        //  console.log(result.lastChild.length);
+        //  result.lastChild.textContent = "Tuu Bdhiya admi hh";
+        //===============FirstChild and FirstElementChild============================
+        // var result = document.getElementById("myid");
+        // console.log(result.firstChild);
+        // console.log(result.firstElementChild);
+        // console.log(result.firstChild.length);
+        // result.firstElementChild.textContent = "Tuu Bdhiya admi hh";
+        // //================ChildNodes and Children====================
+        // var result = document.getElementById("myid");
+        // console.log(result.childNodes);
+        // console.log(result.children);
+        // console.log(result.childNodes.length);
+        // console.log(result.children.length);
+        // var len = result.length;
+        // for(let i=0; i<len; i++){
+        //     console.log(result.childNodes[i]);
+        //     console.log(result.children[i]);
+        // }
+
+        // result.children[0].textContent = "Tuu Bdhiya admi hh";
+        //=======ParentNode AND ParentElement
+        // var res = document.getElementById("myid");
+        // console.log(res.parentNode);
+        // console.log(res.parentElement);
+
+        // document.write("-----document------<br>")
+        // document.write(document.nodeName+"<br>");
+        // document.write(document.nodeValue+"<br>");
+        // document.write(document.nodeType+"<br>");
+        // console.log(document.nodeName);
+        // console.log(document.nodeValue);
+        // console.log(document.nodeType);
+
+        // document.write("-----Element------<br>")
+        // var elem = document.getElementById("myId");
+        // document.write(elem.nodeName+"<br>");
+        // document.write(elem.nodeValue+"<br>");
+        // document.write(elem.nodeType+"<br>");
+        // console.log(elem.nodeName);
+        // console.log(elem.nodeValue);
+        // console.log(elem.nodeType);
+
+        // document.write("-----Text------<br>")
+        // var txt = document.getElementById("myId");
+        // document.wrrie(txt.firstChild.nodeName+"<br>");
+        // document.write(txt.firstChild.nodeValue+"<br>");
+        // document.write(txt.firstChild.nodeType+"<br>");
+        // console.log(txt.firstChild.nodeName);
+        // console.log(txt.firstChild.nodeValue);
+        // console.log(txt.firstChild.nodeType);
+
+        // document.write("-----   Comment  ------<br>")
+        // var txt = document.getElementById("myId");
+        // document.wrrie(txt.firstChild.nextSibling.nodeName+"<br>");
+        // document.write(txt.firstChild.nextSibling.nodeValue+"<br>");
+        // document.write(txt.firstChild.nextSibling.nodeType+"<br>");
+        // console.log(txt.firstChild.nextSibling.nodeName);
+        // console.log(txt.firstChild.nextSibling.nodeValue);
+        // console.log(txt.firstChild.nextSibling.nodeType);
+
+        //document.write(---------------  Attributes Property------------")
+        // var ans = document.getElementById("js1").attributes[0].nodeName;
+        // var ans1 = document.getElementById("js1").attributes[0].nodeValue;
+        // var ans = document.getElementById("js1");
+        // document.write(ans.attributes[0].name+" = ");
+        // document.write(ans.attributes[0].value+"<br>");
+        // document.write(ans.attributes[1].name+" = ");
+        // document.write(ans.attributes[1].value+"<br>");
+        // document.write(ans.attributes.length+"<br>");
+        // for(let i=0; i<ans.attributes.length; i++){
+        //     document.write(ans.attributes[i].name+" = ");
+        //     document.write(ans.attributes[i].value+"<br>");
+        // }
+
+        
+    </script>
+</body>
+</html>
