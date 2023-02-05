@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<button id="mybtn">Click me </button>
+
+    <script>
+
+document.getElementById("mybtn").onclick = function namo(e){ 
+    console.log(e.clientX);
+    console.log(e.clientY);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(e.currentTarget);
+};
+
+    // var a = document.getElementById("mybtn");
+    // a.addEventListener("mouseover", show, true);
+    // a.addEventListener("mouseover", shows, true);
+    // a.removeEventListener("mouseover",shows,true);
+    // function show(){
+    //     alert('Button Clicked');
+    // }
+    // function shows(){
+    //     alert('Button touched');
+    // }
+        //    document.getElementById("mybtn").onclick = function namo(){ alert('Button clicked');};
+    </script>
+    
+</body>
+</html>
+
+<!-- //Event Binding with HTML Attribute -->
+<!-- <h1>Event handling</h1>
+     <button onclick="alert('Button Clicked')">Click me </button> -->
+   <!-- <button onclick="show()">Click me e</button>
+
+    <script>
+          function show(){
+            alert("Your Tick is too hard");
+          }
+    </script> -->
