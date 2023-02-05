@@ -5,13 +5,199 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node Object</title>
+    <style>
+        .daksh{
+            background-color:  red;
+        }
+        .shivam{
+            background-color: white;
+        }
+    </style>
 </head>
 <body >
-    <div id="myid">
-        <h1> Let me learn javascript dom manipulation</h1>
-        <h2>I am h2</h2>
+    <div id="mydiv">
+        <h2 id="myh1" class="h1" title="tum">I am javascript</h2>
+        <h2 id="myh2" class="daksh aryan" style="color:blue">I am Java Programming</h2>
+        <h2 id="myh3">I am Python</h2>
     </div>
     <script>
+    
+
+    //-CSSDOMTokenList-----------------------
+    // var p = document.getElementById("myh2");
+    // var ans = p.classList;
+    // console.log(ans);
+    // console.log(ans[1]);
+    // console.log(ans.length);
+    // console.log(ans.value);
+    // console.log(ans.item(0));
+    // console.log(ans.item(1));
+    //ans.add("shivam");
+    //ans.add("shivam","dfd","dssdv");
+    //ans.remove("daksh","aryan");
+    //ans.replace("daksh","shivam");
+    //var c = ans.contains("daksh");
+    // ans.toggle("daksh");
+    // console.log(ans);
+
+                        //-------Dynamic Style Manipulation------------------
+                        //var p = document.getElementById("myh2");
+                        //p.className = 'shivam';
+
+    //CSSStyleDeclarationObject------------------------------
+    // var p = document.getElementById("myh2");
+    // var bg = p.style.backgroundColor='red';
+    // p.style.fontSize = '90px';
+    // console.log(p);
+    
+                        //===============removeAttribute method in javascript=--------------
+                        // var p = document.getElementById("myh2");
+                        // //p.removeAttribute('class');
+                        // var tf = p.hasAttribute('id');
+                        // console.log(tf);
+
+    //==========GetAttribute and SetAttribute in javascript--------------------------------------
+    // var p = document.getElementById("myh2");
+    // p.setAttribute('style','color:red');
+    //p.setAttribute('class','shivamKes'); or 
+    //p.className = 'another way to do same thing'
+    // var as = p.getAttribute('class');
+    // console.log(as);
+
+                        //==============Attribute Property in javascript---------------------------------------
+                        // var h = document.getElementById("myh1");
+                        // console.log(h.attributes);//get all attributes as per given id or class or title
+                        // console.log(h.attributes[1]);//get attribute which is situated at index 1
+    //==========textNode.substringData(Start, length) || Get a substrinig of data or text of the element.
+    //var h1 = document.getElementById("myh2");
+    //var result = h1.firstChild.substringData(0, 10);
+    //console.log(result);
+    
+                    //==========textNode.splitText(Start) || split a data or text in two parts
+                    // var h1 = document.getElementById("myh2");
+                    // var rytSide = h1.firstChild.splitText(5);
+                    // console.log(rytSide);
+                    // console.log(h1.childNodes);
+
+    //==========textNode.replaceData(String) || Replace a data or text in existing element
+    //  var h1 = document.getElementById("myh2");
+    //  h1.firstChild.replaceData(0, 10, "I am DAKSH ");
+
+                //==========textNode.insertData(start, "String") || insert a data or text in existing element
+                // var h1 = document.getElementById("myh2");
+                // h1.firstChild.insertData(0, "I am DAKSH");
+
+    //==========textNode.deleteData(start, length) || delete a data or text in existing element
+    // var h1 = document.getElementById("myh2");
+    // h1.firstChild.deleteData(0, 7);
+
+                //==========textNode.appendData(String) || append a data or text in existing element
+                // var h1 = document.getElementById("myh2");
+                // h1.firstChild.appendData("I am DAKSH");
+
+    //=========textNode.data property || basically used for set and return the data==========
+    // var d = document.getElementById("myh3");
+    // return the data
+    // var getData = d.firstChild.data;
+    // console.log(getData);
+    // set the Data
+    // d.firstChild.data = "I am PHP";
+    // console.log(d.firstChild.data);
+                    //===========textNode.length-----------------------
+                    // var h = document.getElementById("myh2").firstChild.length;
+                    // console.log(h);
+    //=================Replace child property in javascript---------------------
+    // var u = document.getElementById("mydiv");
+    // var i = document.getElementById("myh2");
+    // var newChild = document.createElement("h2");
+    // newChild.textContent = "I am Dennis Ritchie";
+    // u.replaceChild(newChild,i);
+
+                    //==============delete the node by removeChild()-------------------
+                    // var u = document.getElementById("mydiv");
+                    // var i = document.getElementById("myh1");
+                    // var delNode = u.removeChild(i);
+                
+    //==========Clone the noed cloneNode(deep) || where deep = true / false;
+    // var u = document.getElementById("mydiv");
+    // var duplicateNode = u.cloneNode(true);
+   
+    // var div = document.getElementById("mine").appendChild(duplicateNode);
+    // console.log(duplicateNode);
+
+                        //=============innerHTML in javascript===============
+                        //     var u = document.getElementById("myh1");
+                        //     u.outHTML = "I am C++";
+
+    //=============outerHTML in javascript===============
+    //     var divId = document.getElementById("mydiv");
+    //     var u = document.getElementById("myh1");
+    //     u.outerHTML = "<p>I am C++</p>";
+    //    console.log(divId);
+        
+                    //==========Insert Adjacent HTML in javascript==========
+                    // var h1 = document.getElementById("myh2");
+                    // var myHTML = "<h2>I AM BEGINNER LOVER PROGRAMMING LANGUAGE - C PROGRAMMING</h2>";
+                    // h1.insertAdjacentHTML('beforebegin',myHTML);
+                    //         h1.insertAdjacentHTML('afterbegin',myHTML);
+                    // h1.insertAdjacentHTML('beforeend',myHTML);
+                    //         h1.insertAdjacentHTML('afterend',myHTML);
+                    // console.log(h1);
+
+        //============Insert Adjacent Element method in javascript============
+        // var parentNode = document.getElementById("mydiv");
+        // var h1 = document.getElementById("myh2");
+        // var cElem = document.createElement("span");
+        // cElem.textContent = "This is span";
+        // h1.insertAdjacentElement('beforebegin', cElem);
+        //         h1.insertAdjacentElement('afterbegin', cElem);
+        // h1.insertAdjacentElement('beforeend', cElem);
+        //         h1.insertAdjacentElement('afterend', cElem);
+        // console.log(h1);
+
+                //=========insertBefore methd in javascript==============
+                //===syntax = parentNode.insertBefore(newNode, referenceNode)=======
+                // var parentNode = document.getElementById("myul");//accessing parentNode
+                // var newNode = document.createElement("li");//creating new li element
+                // newNode.textContent = "i am Express JS";//adding text in new node
+                // var referenceNode = document.getElementById("myang");//accessing reference node
+                // parentNode.insertBefore(newNode, referenceNode);//insert new element -- id i given a null at the place of referenceNnode then it moves to last position of the list
+                // console.log(parentNode);
+                //================move  existing node in the list
+                // var parentNode = document.getElementById("myul");
+                // var moveNode = document.getElementById("myd3");
+                // var referenceNode = document.getElementById("myang");
+                // parentNode.insertBefore(moveNode, referenceNode);
+                //===========insert text node
+                // var parentNode = document.getElementById("myul");
+                // var textNode = document.createTextNode(" i am Typescript");
+                // var referenceNode = document.getElementById("myang");
+                // parentNode.insertBefore(textNode, referenceNode);
+                //insert new node from another parent node
+                // var parentNode = document.getElementById("myul");
+                // var moveNode = document.getElementById("myJava");
+                // var referenceNode = document.getElementById("myang");
+                // parentNode.insertBefore(moveNode, referenceNode);
+                
+        //============Normalize method in javascript===============
+        // var targetNode = document.getElementById("myid");//targeting element where we wil append new nodes.
+        // targetNode.appendChild(document.createTextNode(" Hello "));//creating and append new text
+        // targetNode.appendChild(document.createTextNode(", My Name is Daksh Kesarwani "));
+        // targetNode.appendChild(document.createTextNode(" Daksh Kesarwani "));
+        
+        // targetNode.normalize();
+        // console.log(targetNode.childNodes);
+                //===========Example of Document fragment in javascript==============
+                // var df = document.createDocumentFragment();//creating empty document fragment
+                // var helem = document.createElement("h2");//creating new h2  element
+                // var pelem = document.createElement("p");//creating new p element
+                // helem.textContent = "i am h2";
+                // pelem.textContent = "i am p";
+                // df.appendChild(helem);//append h1 node in document fragment
+                // df.appendChild(pelem);//append p node in document fragment
+                // var divPush = document.getElementById("myid");//access target node where we want to push document gragment
+                // divPush.appendChild(df);//push document fragment in div.
+                // console.log(divPush);//you can check now result from there.
         //============Append Element Node Text Node and Comment Node Together in JavaScript====
         // var nEnode = document.createElement("h2");//creating new Element
         // var nTnode = document.createTextNode("Text by js");//creating text node
