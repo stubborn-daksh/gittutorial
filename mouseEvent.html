@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <h1>Mouse Event</h1>
+    <!-- <div id="one" style="width:100x; height:100px; background-color: red;">
+        <div id="two" style="width:60px; height:60px; background-color: black;"></div>
+    </div> -->
+<!--     
+    Name : <input type="text" id="myText"> -->
+    <button id="btn">Create New Window</button>
+    <script>
+//--------------Window Object------------------
+// document.getElementById("btn").addEventListener("click",cnw);
+// function cnw(){
+//     window.open();
+// }
+var NewWindow = window.open("https://www.twitter.com","_blank","width =1000, height = 1000, scrollbars=no");
+function exit(){
+    NewWindow.close();
+}
+document.getElementById("btn").addEventListener("click",exit);
+// var oh = window.outerHeight;
+// var ow = window.outerWidth;
+// var ih = window.innerHeight;
+// console.log(oh);
+// console.log(ih);
+// console.log(ow);
+//window.alert("Hello Daksh");
+//------------------------Key Events--------------------
+// var txt = document.getElementById("myText");
+// function ke(e){
+//     console.log(e.type+'   '+e.keyCode+'  '+String.fromCharCode(e.keyCode));
+// }
+
+// txt.addEventListener("keydown",ke);
+// txt.addEventListener("keypress",ke);
+// txt.addEventListener("keyup",ke);
+//----------------------Focus Event-----------------------
+        //  var txt = document.getElementById("myText");
+        //     function fe(e){
+        //         txt.style.backgroundColor = 'Orange';
+        //     }
+        //     function be(e){
+        //         txt.style.backgroundColor = 'white';
+        //     }
+        //     txt.addEventListener("focus",fe);
+        //     txt.addEventListener("blur",be);
+//------------------Mouse Event------------------------------
+        // function div1(e){
+        //  console.log(e.type);
+        // }
+
+        // var divOne = document.getElementById("one");
+        // var divTwo = document.getElementById("two");
+        // divTwo.addEventListener("mousedown",div1 , false);
+        // divTwo.addEventListener("mouseover",div1 , false);
+        // divTwo.addEventListener("click",div1 , false);
+        // divTwo.addEventListener("dblclick",div1 , false);
+        // divTwo.addEventListener("mouseenter",div1 , false);
+        // divTwo.addEventListener("mouseleave",div1 , false);
+        // divTwo.addEventListener("mouseout",div1 , false);
+        // divTwo.addEventListener("contextmenu",div1 , false);
+    </script>
+</body>
+</html>

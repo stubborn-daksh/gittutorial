@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+   
+        <!-- <h1>Your Form</h1>
+            <form action="" name="yourForm" id="YourFormId">
+            UserName : <input type="text"  name="Yusername" placeholder="Write Your Name"><br><br>
+            Password : <input type="password"  name="Ypassword" placeholder="wrtie your password"><br><br>
+                <input type="submit" name="Ysubmit" value="submit">
+            </form>
+        -->
+
+        <h1>My Form</h1>
+        <form action="" name="myform" id="myFormId">
+        UserName : <input type="text" id="Musername" name ="Musername" placeholder="Write Your Name"><br><br>
+        Password : <input type="password" id="Mpassword" name="Mpassword" placeholder="wrtie your password"><br><br>
+            <input type="submit" name="Msubmit" value="submit"><br><br>
+        </form>
+
+    <script>
+    //-------------Form Validation in javascript----------------------
+    function validateData(){
+        var ptrn = /^([^0-9\W]*)$/;
+           if(ptrn.test(document.myform.Musername.value)){
+            document.myform.Musername.style.backgroundColor = 'Green';
+           }else{
+            document.myform.Musername.style.backgroundColor = 'Red';
+           }
+    }
+    document.myform.Musername.addEventListener("keyup", validateData)
+
+    //--------Accessing Form Fields in javascript----------------------
+    //var UserName = document.getElementById("Musername");//--------with document id value
+    //var UserName = document.myform.elements[2];//===with document index number
+    //var UserName = document.myform.elements['Musername'];//===with Name Attribute value
+    //UserName.value = 'Rahul';//set the value in the form
+    //console.log(UserName);
+    // console.log(UserName.name);
+    // console.log(UserName.type);
+    // console.log(UserName.id);
+    // console.log(UserName.placeholder);
+
+    //========Different methods od accessing an form in javascript--------------==============
+     // var mform =  document.forms[0];
+     // var mform =  document.forms['myform'];
+     // var mform =  document.myform;
+     //var mform =  document.getElementById("myFormId");
+     // console.log(mform);
+
+
+
+    </script>
+</body>
+</html>
