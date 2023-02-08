@@ -3,11 +3,13 @@ var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
 
 // Form submit event
-form.addEventListener('submit', addItem);
+form.addEventListener('submit', addItemWithDescription);
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
 filter.addEventListener('keyup', filterItems);
+
+
 
 // Add item
 function addItem(e){
@@ -65,3 +67,39 @@ function filterItems(e){
     }
   });
 }
+
+
+// Add Description event
+
+function addItemWithDescription(e){
+    e.preventDefault();
+  
+    // Get input value
+    var newItem = document.getElementById('item').value;
+    var newItemD = document.getElementById('description').value;
+    var final = newItem+" "+newItemD;
+    // Create new li element
+    var li = document.createElement('li');
+
+    // Add class
+    li.className = 'list-group-item';
+    // Add text node with input value
+    var total = li.appendChild(document.createTextNode(final));
+    
+  
+    // Create del button element
+    var deleteBtn = document.createElement('button');
+  
+    // Add classes to del button
+    deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  
+    // Append text node
+    deleteBtn.appendChild(document.createTextNode('X'));
+  
+    // Append button to li
+    li.appendChild(deleteBtn);
+  
+    // Append li to list
+    itemList.appendChild(li);
+  }
+  
