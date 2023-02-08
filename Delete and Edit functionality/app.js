@@ -80,6 +80,11 @@ function addItemWithDescription(e){
     var newItem = document.getElementById('item').value;
     var newItemD = document.getElementById('description').value;
     var final = newItem+" "+newItemD;
+
+    var stAsObj = {
+        fname : newItem,
+        lname : newItemD
+    }
     
     // Create new li element
     var li = document.createElement('li');
@@ -104,6 +109,9 @@ function addItemWithDescription(e){
   
     // Append li to list
     itemList.appendChild(li);
-    localStorage.setItem("Task",final);
+    // localStorage.setItem("Task",final);
+    let myobj_json = JSON.stringify(stAsObj);
+    localStorage.setItem("myobj", myobj_json);
+    console.log(localStorage);
   }
   
