@@ -80,6 +80,7 @@ function addItemWithDescription(e){
     var newItem = document.getElementById('item').value;
     var newItemD = document.getElementById('description').value;
     var final = newItem+" "+newItemD;
+    
     // Create new li element
     var li = document.createElement('li');
 
@@ -103,5 +104,6 @@ function addItemWithDescription(e){
   
     // Append li to list
     itemList.appendChild(li);
+    localStorage.setItem("Task",final);
   }
   
