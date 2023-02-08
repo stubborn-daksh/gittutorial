@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h1>COOKIES</h1>
+    
+    <script>
+        // document.cookie ="username=daksh";
+        // alert("document.cookie");
+        // window.localStorage.setItem("Username","Daksh");
+        // window.localStorage.setItem("email","daksh@gmail.com");
+        // window.localStorage.setItem("Course","Bachelor of Technology");
+        // console.log(localStorage.length);
+        
+
+        //JSON.Striingfy()
+        //a common use to JSON.Stringfy() is to exchange data to/from a web server.
+        //when sending data to a web server. the data must be a string
+        // const obj = {
+        //    name : 'Daksh',
+        //    class : 16 ,
+        //    Course : 'B.Tech'
+        // };
+
+        // var myDetails = JSON.stringify(obj);
+        // console.log(myDetails);
+
+        //Regular Expression => A regular expression is a sequence of characters that form a search pattern.
+        //The search pattern can be used for text search and text replace operations.
+        
+        //javascript prototypes
+        function Student(fname , lname, age, fsubject){
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.fsubject = fsubject;
+        this.nationality = 'India';
+        }
+        // Student.prototype.nationality = "Inida"; //example of prototype inheritance
+        const obj = new Student("Daksh", "Kesarwani" , 21, "Math");
+        console.log(obj.nationality);
+    </script>
+</body>
+</html>

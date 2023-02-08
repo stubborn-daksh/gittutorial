@@ -29,6 +29,7 @@ console.log(ans1);
 //     document.write(result +"<br>");
 // }
 
+
 //Get Elements by class name
 // var res7 = document.body.getElementsByClassName("header");
 // console.log(res7);
