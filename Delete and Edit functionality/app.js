@@ -3,6 +3,8 @@ var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
 
 // Form submit event
+//form.addEventListener('submit', addItem);
+//Form submit event with Description 
 form.addEventListener('submit', addItemWithDescription);
 // Delete event
 itemList.addEventListener('click', removeItem);
