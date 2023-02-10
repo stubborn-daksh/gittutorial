@@ -1,17 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"; //import React library on page
+import { ReactDOM } from "react"; //import library for rendering a code on browser
+//importing a file from another page
+import am from "./App";
+//let el = <h1>Hello Daksh It is your first React Project</h1>
+let el1 = React.createElement("h1",null,"Daksh Kesarwani");
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(el1, document.getElementById("root"));
+ReactDOM.render(am , document.getElementById("num"));
