@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Appointment App</title>
+</head>
+<body>
+    <H2>Booking Appointment App</H2>
+    <form onsubmit="showUserDetails(event)">
+       Name:         <input type="text" name="username" id="username"> <br><br>
+       Email-Id :    <input type="email" name="useremail" id="useremail"><br><br>
+       Contact No.:  <input type="text" name="phoneNo" id="phoneNo"><br><br>
+        <input type="submit" value="Submit" name="" id="">
+    </form>
+
+        <ul id="listOfitems"></ul>
+
+
+        <script>
+
+            var ans = document.getElementById("bfsd");
+        function showUserOnScreen(obj) {
+          const parentElem = document.getElementById('listOfitems');
+          parentElem.innerHTML = <li> ${obj.name} - ${obj.email} - ${obj.contactNo} </li>
+        }
+
+        function showUserDetails(event) {
+           var name = event.target.username.value;
+           var email = event.target.useremail.value; 
+           var contactNo = event.target.phoneNo.value;
+
+           const obj = { name, email, contactNo }
+
+           localStorage.setItem("Appointment Details", JSON.stringify(obj));
+           showUserOnScreen(obj);
+        }
+ 
+
+        //    var form = document.getElementById('addForm');          
+        //    var itemList = document.getElementById('items');
+
+        //    form.addEventListener("submit", addItem);
+
+        //    //Add item in browser as well as localStorage
+        //     function addItem(e){
+        //         e.preventDefault();
+        //         var name = document.getElementById('username').value;
+        //         var emailId = document.getElementById("useremail").value;
+        //         var ContactNo =  document.getElementById("phoneNo").value;
+        //         var li = document.createElement('li');
+        //          li.appendChild(document.createTextNode("Name : "+name+" , "+" Email-Id : "+emailId+" , Contact No. : "+ContactNo));
+                
+        //         var deleteBtn = document.createElement('button');
+        //         deleteBtn.setAttribute("class", "delete");
+        //         // Append text node
+        //         deleteBtn.appendChild(document.createTextNode('Delete'));
+        //         // Append button to li
+        //         li.appendChild(deleteBtn);
+        //         itemList.appendChild(li);
+
+        //         //stored data in a localstorage in the form of array
+        //         // var addDetailsInLocalStorage =  [ "Name : " +name,
+        //         //  "Email-Id :" +emailId ,
+        //         //  "Contact No. : "+ContactNo
+        //         // ]
+        //         //var ans = addDetailsInLocalStorage.toString();
+
+        //         //--store data in a local storage in the form of object
+        //         var stAsObj = {
+        //             UserName : name,
+        //             Email : emailId,
+        //             Contact : ContactNo
+        //         }
+        //         let myobj_json = JSON.stringify(stAsObj);//convert object data into json form  
+        //         localStorage.setItem("Appointment Details ", myobj_json);
+
+        //     }
+
+        //     //Remove item in browser as well as from localStorage
+        //     function removeItem(e){
+        //             if(e.target.classList.contains('delete')){
+        //                 if(confirm('Are You Sure?')){
+        //                 var li = e.target.parentElement;
+        //                 itemList.removeChild(li);
+        //                 }
+        //             }
+        //         }
+           
+        </script>
+</body>
+</html>
