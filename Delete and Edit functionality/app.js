@@ -1,16 +1,18 @@
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
+var edit = document.getElementById('items');
 
 // Form submit event
 //form.addEventListener('submit', addItem);
 //Form submit event with Description 
-form.addEventListener('submit', addItemWithDescription);
+form.addEventListener('submit', addItem);
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
 filter.addEventListener('keyup', filterItems);
-
+//edit event
+edit.addEventListener('click',editTask);
 
 
 // Add item
@@ -50,6 +52,14 @@ function removeItem(e){
       var li = e.target.parentElement;
       itemList.removeChild(li);
     }
+  }
+}
+
+//edit item
+function editTask(e){
+  if(e.target.classList.contains('edit')){
+   var text = e.target.parentElement.firstChild.textContent;
+   
   }
 }
 
