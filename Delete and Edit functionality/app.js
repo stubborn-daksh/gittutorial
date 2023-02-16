@@ -59,7 +59,7 @@ function removeItem(e){
 function editTask(e){
   if(e.target.classList.contains('edit')){
    var text = e.target.parentElement.firstChild.textContent;
-   
+   document.getElementById('items').innerHTML= '';
   }
 }
 
