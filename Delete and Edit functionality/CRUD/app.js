@@ -1,6 +1,6 @@
 
 var selectedRow = null;
-
+//show alert
 function showAlert(message, className){
   const div = document.createElement("div");
   div.className = `alert alert-${className}`;
